@@ -24,6 +24,11 @@ and optionally sends it to your email via **Gmail SMTP** using `msmtp` and `mail
 
 ---
 
+Create App Password for .msmtprc
+https://myaccount.google.com/apppasswords
+
+---
+
 ## 🚀 Installation
 
 ### 1️⃣ Install dependencies
