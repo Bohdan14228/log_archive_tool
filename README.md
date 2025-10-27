@@ -4,6 +4,7 @@
 
 This Bash script creates a compressed archive (`.tar.gz`) of any log directory  
 and optionally sends it to your email via **Gmail SMTP** using `msmtp` and `mail`.
+Project page: [https://roadmap.sh/projects/log-archive-tool)
 
 ---
 
