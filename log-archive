@@ -1,0 +1,33 @@
+#!/bin/bash
+
+
+log_dir=$1
+email=$2
+
+if [ -z "$log_dir" ]; then
+  echo "Usage: log-archive <log-directory>"
+  exit 1
+fi
+
+if [ ! -d "$log_dir" ]; then
+  echo "Error: '$log_dir' is not a directory"
+  exit 1
+fi
+
+
+timestamp=$(date +%Y-%m-%d_%H-%M-%S)
+archive_name="logs_$timestamp.tar.gz"
+
+save_dir=/home/admin88/log_archive_tool/backup/
+#mkdir -p "$save_dir"
+#chmod o+w /home/admin88/log_archive_tool
+tar -czf "$save_dir$archive_name" -C "$log_dir" .
+
+echo "✅ Logs archived to: $save_dir$archive_name"
+
+if [ -n "$email" ]; then
+  echo "Archive sand to $email"
+  echo "Here is the latest archive." | mail -s "Server logs" -A "$save_dir$archive_name" "$email"
+else
+  echo "ℹ️  No email provided. Archive saved locally only."
+fi
