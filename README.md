@@ -3,7 +3,7 @@
 # 🧾 log-archive — Simple Log Archiver and Mail Sender
 
 This Bash script creates a compressed archive (`.tar.gz`) of any log directory  
-and optionally sends it to your email via **Gmail SMTP** using `msmtp` and `mail`.
+and optionally sends it to your email via **Gmail SMTP** using `msmtp` and `mail`.\n
 Project page: [https://roadmap.sh/projects/log-archive-tool)
 
 ---
